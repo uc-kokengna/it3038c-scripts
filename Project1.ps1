@@ -14,8 +14,6 @@ $Free = @{
     Expression={"{0,6:P0}" -f(($_.freespace/1gb) / ($_.size/1gb))}
 }
 
-#Get-CimInstance -Class CIM_LogicalDisk => Retrieves Logical disk data only
-# CIM NEEDS TO BE USED IN PS CORE AS OPPOSED TO WMI
 
 function getDSK
 {
