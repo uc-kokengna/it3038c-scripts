@@ -10,13 +10,14 @@ function hostnameLookup(hostname)
     })
 }
 
-
+//IF PROCESS FOR ARRAY LENGTH
 if (process.argv.length <= 2) /*/if PROCESS ARRAY LENGTH IS LESS THAN OR EQUAL TO 2/**/ 
 {
     console.log("USAGE: " + __filename + " hostname.com") /*/ OUTPUT /**/ 
     process.exit(-1) /*/ -1 means it did not succeed /**/   
 }
 
+//VAR HOSTNAME = ARRAYS
 var hostname = process.argv[2] /*/ /**/ 
 console.log(`Checking IP of : ${hostname}`);
 hostnameLookup(hostname); /*/ Call hostname from function 'hostnameLookup'/**/ 
