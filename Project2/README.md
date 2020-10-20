@@ -19,7 +19,7 @@ cd C:\it3038c-scripts\Project2 (enter)
 ###### Because this script is written with an *Out-GridView*, your results will display in a secondary window!
 
 ###### If wish to keep this program for future use but want to minimize results, you can remove objects within the coding, AFTER *-Property*, and narrow the amount of information you wish to recieve.
-
 ```PowerShell
 $DSK= (getDSK | Select-object -Property DriveLetter, DiskPartition, FileSystem, Status, VolumeName, Description, DiskSizeGB, FreeSpaceGB , PercentageFree, DiskModel);
 ``` 
+###### NOTE: The order in which the objects are organized will dislay in the same manner of the window grid.
