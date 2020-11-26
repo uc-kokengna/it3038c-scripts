@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+<!--BLOCK CONTENT THAT APPEARS ON MAIN PAGE (LAYOUT.HTML)-->
+{% block content %}
+<p><em>What is your name?</em> <!--block content will appear in layout.html-->
+    <!--SUBMIT BUTTON WILL SEND USER TO LOCALHOST:5000/WELCOME PAGE-->
+   <form action="/welcome" method="POST"><input name="myName"><input type="submit" value="Submit"></form>
+</p>
+{% endblock %}
+
