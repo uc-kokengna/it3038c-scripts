@@ -15,16 +15,16 @@
     
         Get-CimInstance -Query $drives | ForEach-Object   {
           New-Object -Type PSCustomObject -Property @{
-#vARIABLE NAME = Object EXPRESSION
+
             DiskPartition = $partition.Name
             DriveLetter = $_.DeviceID
             FileSystem = $_.FileSystem
             Description = $_.Description
-            DiskSizeGB = ($_.Size/1GB) -as [float]
-            FreeSpaceGB = ($_.FreeSpace/1GB) -as [float]
+            DiskSizeGB        = ($_.Size/1GB) -as [float]
+            FreeSpaceGB   = ($_.FreeSpace/1GB) -as [float]
             VolumeName  = $_.VolumeName
-            DiskModel = $disk.Model
-            PercentageFree= ($_.FreeSpace/$_.Size*100 ) -as [float] 
+            DiskModel   = $disk.Model
+            PercentageFree= ($_.FreeSpace/$_.Size*100) -as [float] 
             Status = $disk.Status
           }
         }
