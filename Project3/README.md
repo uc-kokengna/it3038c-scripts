@@ -1,6 +1,6 @@
 # Project3
 ## Collects and displays detailed information of your system.
-#### 1. Bios: SMBIOS BIOS Version, Manufacturer, Name, SerialNumber
+##### 1. Bios: _SMBIOS BIOS Version, Manufacturer, Name, SerialNumber_
 #### 2. Operating System:  Caption, Version, Build Number, Manufacturer
 #### 3. Processor:  DeviceID, Name, Manufacturer, Max ClockSpeed, Caption
 #### 4. Video Controller: DeviceID, Status, Name, Adapter Compatibility, VideoMode Description, AdapterType, Driver Version
