@@ -1,8 +1,11 @@
-# Project2
-### Identify information of locally connected physical disks and other storage devices.
-
+# Project3
+## Collects and displays detailed information of your system.
+### Current Information Collected From Script:
+#### 1. Bios: SMBIOSBIOSVersion, Manufacturer, Name, SerialNumber
+#### 2. Operating System: Caption, Version, BuildNumber, Manufacturer
+#### 3. Processor: DeviceID, Name, Manufacturer, MaxClockSpeed, Caption
 ## Getting Started
-### This script was written to run and gather physically connected storage without any user input.
+### This script was written to run and gather specific detailed information of system with minimal user input.
 
 #### Prerequisites
 ###### To run this program, make sure you're running Windows PowerShell ISE or an equivalent program (e.g. Visual Studio Code). 
