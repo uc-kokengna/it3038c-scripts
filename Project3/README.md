@@ -8,6 +8,10 @@
 
 #### Prerequisites
 ###### To run this program, make sure you're running Windows PowerShell ISE or an equivalent program (e.g. Visual Studio Code). 
+###### User will need to change "-FilePath" paramater to properly generate HTML report.
+```Powershell
+$Report | Out-File -FilePath .\Computer-Information-Report.html
+```
 
 #### Execution
 ###### 1. You can either manually copy, paste the entire code in ISE and run.
