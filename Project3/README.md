@@ -1,10 +1,12 @@
 # Project3
 ## Collects and displays detailed information of your system.
-##### 1. Bios: _SMBIOS BIOS Version, Manufacturer, Name, SerialNumber_
-#### 2. Operating System:  Caption, Version, Build Number, Manufacturer
-#### 3. Processor:  DeviceID, Name, Manufacturer, Max ClockSpeed, Caption
-#### 4. Video Controller: DeviceID, Status, Name, Adapter Compatibility, VideoMode Description, AdapterType, Driver Version
-#### 5. RAM: Tag, Description, Capactiy, Speed, Configured ClockSpeed, Device Slot 
+#### 1. BIOS: _SMBIOS BIOS Version, Manufacturer, Name, SerialNumber_
+#### 2. OPERATING SYTEM:  _Caption, Version, Build Number, Manufacturer_
+#### 3. Processor:  _DeviceID, Name, Manufacturer, Max ClockSpeed, Caption_
+#### 4. Video Controller(s): _DeviceID, Status, Name, Adapter Compatibility, VideoMode Description, AdapterType, Driver Version_
+#### 5. RAM: _Tag, Description, Capactiy, Speed, Configured ClockSpeed, Device Slot_ 
+#### 6. Disk Drive(s): _Disk Paritions, Drive Letter(s), File System, Description, Disk Size (GB), Free Space (GB), Volume Name(s), Disk Model(s), Percentage Free, Working Status_
+
 ## Getting Started
 ### This script gathers specific detailed information of system and requires minimal user input.
 
