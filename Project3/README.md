@@ -1,16 +1,18 @@
 # Project3
 ## Collects and displays detailed information of your system.
-#### 1. Bios: SMBIOSBIOSVersion, Manufacturer, Name, SerialNumber
-#### 2. Operating System: Caption, Version, BuildNumber, Manufacturer
-#### 3. Processor: DeviceID, Name, Manufacturer, MaxClockSpeed, Caption
+#### 1. Bios: SMBIOS BIOS Version, Manufacturer, Name, SerialNumber
+#### 2. Operating System:  Caption, Version, Build Number, Manufacturer
+#### 3. Processor:  DeviceID, Name, Manufacturer, Max ClockSpeed, Caption
+#### 4. Video Controller: DeviceID, Status, Name, Adapter Compatibility, VideoMode Description, AdapterType, Driver Version
+#### 5. RAM: Tag, Description, Capactiy, Speed, Configured ClockSpeed, Device Slot 
 ## Getting Started
-### This script was written to gather specific detailed information of system, with minimal user input.
+### This script gathers specific detailed information of system and requires minimal user input.
 
 #### Prerequisites
 ###### To run this program, make sure you're running Windows PowerShell ISE or an equivalent program (e.g. Visual Studio Code). 
 ###### User will need to change "-FilePath" paramater to properly generate HTML report (e.g. Desktop). 
 ```Powershell
-$Report | Out-File -FilePath C:\Users\spiri\Desktop\Computer-Information-Report.html
+$Report | Out-File -FilePath .\Desktop\Computer-Information-Report.html
 ```
 
 #### Execution
