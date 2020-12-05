@@ -21,15 +21,15 @@ $header = @"
     }
 
    table {
-		border: 0px; 
+   	border: 0px; 
         font-family: Arial, Helvetica, sans-serif;
         display: inline-block; 
         vertical-align: middle;
 	} 
 	
     td {
-		padding: 4px;
-		margin: 0px;
+	padding: 4px;
+	margin: 0px;
         border: 0;
         width: 400px;   
     }
@@ -73,7 +73,6 @@ $header = @"
 # OBTAIN NAME OF COMPUTER NAME
 $ComputerName = "<h1>Computer Name: $env:computername</h1>"
 
-
 #LIST OF WIN32 CREATION CLASS/CLASSNAMES VARIABLES
 #REMOVE VARIABLES BETWEEN "-Property" AND "-Fragment" TO FILTER DISPLAYED INFORMATION
 
@@ -86,7 +85,6 @@ $Processor = Get-CimInstance -Class Win32_Processor | ConvertTo-Html -As List -P
 $VideoController = Get-CimInstance -Class Win32_VideoController | ConvertTo-Html -As List -Property DeviceID, Status, Name, AdapterCompatibility, VideoModeDescription, AdapterDACType, DriverVersion -Fragment -PreContent "<h2>Graphics (GPU) Information</h2>"
 
 $Ram = Get-CimInstance -ClassName Win32_PhysicalMemory | ConvertTo-Html -As List -property Tag,Description, Capactiy, Speed, ConfiguredClockSpeed, DeviceLocator -Fragment -PreContent "<h2>Physical Memory (RAM) Information</h2>"
-
 
 #COLLECTS DATA OF PHYSCAL AND LOGICAL DISK DRIVES, INCLUDING PARTITIONS
 #NOT ADVISABLE TO ALTER "funciton getDSK" UNLESS EXPERIENCED.
@@ -124,7 +122,6 @@ function getDSK {
 # REMOVE OBJECTS AFTER "-Property" TO FILTER FINDINGS
 $DSK= (getDSK | Select-object -Property DriveLetter, DiskPartition, FileSystem, Status, VolumeName, Description, DiskSizeGB, FreeSpaceGB , PercentageFree, DiskModel);
 $DiskDrive = ($DSK | ConvertTo-Html -As List -Fragment -PreContent "<h2 >Disk Drive Information</h2>");
-
 
 #COMBINES ALL PREVIOUS WIN32 CREATIED CLASS/CLASSNAMES VARIABLES INTO ONE GENERATED HTML REPORT
 $Report = ConvertTo-HTML -Body "$ComputerName $BiosInfo $OperatingSystem $Processor $VideoController $Ram $DiskDrive" -Title "Systems Report" -Head $header -PostContent "<p id='DateGenerated'>Date Generated: $(Get-Date)<p>"
