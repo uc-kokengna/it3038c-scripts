@@ -1,6 +1,5 @@
 # Project3
 ## Collects and displays detailed information of your system.
-### Current Information Collected From Script:
 #### 1. Bios: SMBIOSBIOSVersion, Manufacturer, Name, SerialNumber
 #### 2. Operating System: Caption, Version, BuildNumber, Manufacturer
 #### 3. Processor: DeviceID, Name, Manufacturer, MaxClockSpeed, Caption
