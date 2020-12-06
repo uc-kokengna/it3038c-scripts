@@ -20,6 +20,7 @@
 $Report | Out-File -FilePath .\Desktop\Computer-Information-Report.html
 ```
 ##### Method 2: Use ISE terminal WITH ADMIN PERMISSIONS, navigate to the directory where the script resides and execute.
+##### Default location is C:\
 ```Powershell
 cd C:\it3038c-scripts\Project3 (enter)
 ```
