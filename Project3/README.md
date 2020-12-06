@@ -10,33 +10,33 @@
 ## Getting Started
 ### This script gathers specific detailed information of system and requires minimal user input.
 
-#### Prerequisites
-###### To run this program, make sure you're running Windows PowerShell ISE or an equivalent program (e.g. Visual Studio Code). 
-###### User will need to change "-FilePath" paramater to generate HTML report in another folder/directory (e.g. Desktop). 
+### Prerequisites!
+##### 1. To run this program, make sure you're running Windows PowerShell ISE or an equivalent program (e.g. Visual Studio Code). 
+##### 2. User will need to change "-FilePath" paramater to generate HTML report in another folder/directory (e.g. Desktop). 
 
-#### Execution
-###### Method 1: Manually copy and paste the entire code in ISE. Change the "-FilePath" parameter to a more accessible friendly area and execute.
+### Execution
+##### Method 1: Manually copy and paste the entire code in ISE. Change the "-FilePath" parameter to a more accessible friendly area and execute.
 ```Powershell
 $Report | Out-File -FilePath .\Desktop\Computer-Information-Report.html
 ```
-###### Method 2: Use Administrator ISE terminal, navigate to the directory where the script resides and execute.
+##### Method 2: Use Administrator ISE terminal, navigate to the directory where the script resides and execute.
 ```Powershell
 cd C:\it3038c-scripts\Project3 (enter)
 ```
 ```Powershell
 .\Project3.ps1 (enter)
 ```
-###### An HTML will generate in "-FilePath" location
+##### An HTML will generate in "-FilePath" location
 
-###### To minimize filter results, you can remove objects (from '-Property' to "-Fragment) within: 
+##### To minimize filter results, you can remove objects (from '-Property' to "-Fragment) within: 
 ```PowerShell
 $BiosInfo $OperatingSystem $Processor $VideoController $Ram 
 ``` 
-##### To add additional classes for larger results, use Powershell and enter: 
+#### To add additional classes for larger results, use Powershell and enter: 
 ```PowerShell
 Get-CimClass -ClassName *Win32*
 ``` 
-##### This will display all Win32 classes, for which to search and add to the script. For Example:
+#### This will display all Win32 classes, for which to search and add to the script. For Example:
 ```PowerShell
 Get-CimInstance -ClassName Win32_BaseBoard
 ``` 
@@ -49,8 +49,8 @@ SerialNumber : NBGD8110056390B89A7600
 SKU          :
 Product      : Ironman_SK
 ``` 
-##### Add the objects desired (Manufacturer, Name, etc) and the line of code similar to that of the application script!
+#### Add the objects desired (Manufacturer, Name, etc) and the line of code similar to that of the application script!
 
-### You can personalize the results and change the inscript CSS as desired!
+### You can personalize the results and change the inscript CSS as desired! Enjoy!
 
 
