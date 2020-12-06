@@ -1,4 +1,4 @@
-#INLINE CSS TEXT, ALTER TO PERSONALIZE YOUR GENERATED RESULTS HTML PRESENTATION
+# INLINE CSS TEXT. ALTER TO PERSONALIZE YOUR GENERATED RESULTS HTML PRESENTATION
 
 $header = @"
 <style>
@@ -59,13 +59,13 @@ $header = @"
 "@
 
 # FOLLOWING CODE ADDS MORE CLASSES. LOOK AT README.md FOR INSTRUCTIONS
-#  "Get-CimClass -ClassName *Win32*" in powershell fetches list of all cim win32 classes
+# "Get-CimClass -ClassName *Win32*" in powershell fetches list of all cim win32 classes
 
 # OBTAIN NAME OF COMPUTER NAME
 $ComputerName = "<h1>Computer Name: $env:computername</h1>"
 
-#LIST OF WIN32 CREATION CLASS/CLASSNAMES VARIABLES
-#REMOVE VARIABLES BETWEEN "-Property" AND "-Fragment" TO FILTER DISPLAYED INFORMATION
+# LIST OF WIN32 CREATION CLASS/CLASSNAMES VARIABLES
+# REMOVE VARIABLES BETWEEN "-Property" AND "-Fragment" TO FILTER DISPLAYED INFORMATION
 
 $BiosInfo = Get-CimInstance -ClassName Win32_BIOS | ConvertTo-Html -As List -Property SMBIOSBIOSVersion, Manufacturer, Name, SerialNumber -Fragment -PreContent "<h2>Bios Information</h2>"
 
@@ -77,8 +77,8 @@ $VideoController = Get-CimInstance -Class Win32_VideoController | ConvertTo-Html
 
 $Ram = Get-CimInstance -ClassName Win32_PhysicalMemory | ConvertTo-Html -As List -property Tag,Description, Capactiy, Speed, ConfiguredClockSpeed, DeviceLocator -Fragment -PreContent "<h2>Physical Memory (RAM) Information</h2>"
 
-#COLLECTS DATA OF PHYSCAL AND LOGICAL DISK DRIVES, INCLUDING PARTITIONS
-#NOT ADVISABLE TO ALTER "funciton getDSK" UNLESS EXPERIENCED.
+# COLLECTS DATA OF PHYSCAL AND LOGICAL DISK DRIVES, INCLUDING PARTITIONS
+# NOT ADVISABLE TO ALTER "funciton getDSK" UNLESS EXPERIENCED.
 function getDSK {
     Get-CimInstance CIM_DiskDrive  | ForEach-Object {
     $disk = $_
@@ -114,9 +114,9 @@ function getDSK {
 $DSK= (getDSK | Select-object -Property DriveLetter, DiskPartition, FileSystem, Status, VolumeName, Description, DiskSizeGB, FreeSpaceGB , PercentageFree, DiskModel);
 $DiskDrive = ($DSK | ConvertTo-Html -As List -Fragment -PreContent "<h2 >Disk Drive Information</h2>");
 
-#COMBINES ALL PREVIOUS WIN32 CREATIED CLASS/CLASSNAMES VARIABLES INTO ONE GENERATED HTML REPORT
+# COMBINES ALL PREVIOUS WIN32 CREATIED CLASS/CLASSNAMES VARIABLES INTO ONE GENERATED HTML REPORT
 $Report = ConvertTo-HTML -Body "$ComputerName $BiosInfo $OperatingSystem $Processor $VideoController $Ram $DiskDrive" -Title "Systems Report" -Head $header -PostContent "<p id='DateGenerated'>Date Generated: $(Get-Date)<p>"
 
-#GENERATE REPORT AS HTML FILE TO DESIRED PATH (OPENS VIA BROWSER)
+# GENERATE REPORT AS HTML FILE TO DESIRED PATH (OPENS VIA BROWSER)
 $Report | Out-File -FilePath C:\Computer-Information-Report.html
 
