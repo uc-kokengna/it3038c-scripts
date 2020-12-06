@@ -15,7 +15,7 @@
 ##### 2. User will need to change "-FilePath" paramater to generate HTML report in another folder/directory (e.g. Desktop). 
 
 ### Execution
-##### Method 1: Manually copy and paste the entire code in ISE. Change the "-FilePath" parameter to a more accessible friendly area and execute.
+##### Method 1: Manually copy and paste the entire code in ISE. Change the "-FilePath" parameter (bottom in script) to a more accessible friendly area, such as your desktop, and execute.
 ```Powershell
 $Report | Out-File -FilePath .\Desktop\Computer-Information-Report.html
 ```
