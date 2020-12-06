@@ -19,7 +19,7 @@
 ```Powershell
 $Report | Out-File -FilePath .\Desktop\Computer-Information-Report.html
 ```
-##### Method 2: Use Administrator ISE terminal, navigate to the directory where the script resides and execute.
+##### Method 2: Use ISE terminal WITH ADMIN PERMISSIONS, navigate to the directory where the script resides and execute.
 ```Powershell
 cd C:\it3038c-scripts\Project3 (enter)
 ```
