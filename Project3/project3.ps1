@@ -118,5 +118,5 @@ $DiskDrive = ($DSK | ConvertTo-Html -As List -Fragment -PreContent "<h2 >Disk Dr
 $Report = ConvertTo-HTML -Body "$ComputerName $BiosInfo $OperatingSystem $Processor $VideoController $Ram $DiskDrive" -Title "Systems Report" -Head $header -PostContent "<p id='DateGenerated'>Date Generated: $(Get-Date)<p>"
 
 #GENERATE REPORT AS HTML FILE TO DESIRED PATH (OPENS VIA BROWSER)
-$Report | Out-File -FilePath C:\Users\spiri\Desktop\Computer-Information-Report.html
+$Report | Out-File -FilePath C:\Computer-Information-Report.html
 
