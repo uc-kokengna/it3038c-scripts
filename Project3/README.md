@@ -32,5 +32,25 @@ cd C:\it3038c-scripts\Project3 (enter)
 ```PowerShell
 $BiosInfo $OperatingSystem $Processor $VideoController $Ram 
 ``` 
-###### NOTE: The order in which the objects are organized will dislay in the same manner of the window grid.
+##### To add additional classes for larger results, use Powershell and enter: 
+```PowerShell
+Get-CimClass -ClassName *Win32*
+``` 
+##### This will display all Win32 classes, for which to search and add to the script. For Example:
+```PowerShell
+Get-CimInstance -ClassName Win32_BaseBoard
+``` 
+##### Displaying results similar to this:
+```PowerShell
+Manufacturer : Acer
+Model        :
+Name         : Base Board
+SerialNumber : NBGD8110056390B89A7600
+SKU          :
+Product      : Ironman_SK
+``` 
+##### Add the objects desired (Manufacturer, Name, etc) and the line of code similar to that of the application script!
+
+### You can personalize the results and change the inscript CSS as desired!
+
 
