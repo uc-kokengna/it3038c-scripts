@@ -64,7 +64,7 @@ SerialNumber : NBGD8110056390B89A7600
 SKU          :
 Product      : Ironman_SK
 ``` 
-#### Add the objects desired (Manufacturer, Name, etc) and the line of code similar to that of the application script!
+#### Add the objects desired (Manufacturer, Name, etc.) and the line of code similar to that of the application script!
 
 ### You can personalize the results and change the inscript CSS as desired! Enjoy!
 
