@@ -14,7 +14,7 @@
 ##### 1. To run this program, make sure you're running Windows PowerShell ISE or an equivalent program (e.g. Visual Studio Code). 
 ##### 2. User will need to change "-FilePath" paramater to generate HTML report in another folder/directory (e.g. Desktop). 
 
-### Execution
+## Execution
 ##### Method 1: Manually copy and paste the entire code in ISE. Change the "-FilePath" parameter (bottom in script) to a more accessible friendly area, such as your desktop, and execute.
 ```Powershell
 $Report | Out-File -FilePath .\Desktop\Computer-Information-Report.html
@@ -27,12 +27,26 @@ cd C:\it3038c-scripts\Project3 (enter)
 ```Powershell
 .\Project3.ps1 (enter)
 ```
-##### An HTML will generate in "-FilePath" location
+##### An HTML link will generate in "-FilePath" location. Select to auto open in your web browser.
 
-##### To minimize filter results, you can remove objects (from '-Property' to "-Fragment) within: 
+## Minimize Search Results!
+
+##### To minimize -Class and -ClassNames results, you can remove objects from variables within: 
 ```PowerShell
 $BiosInfo $OperatingSystem $Processor $VideoController $Ram 
 ``` 
+##### For example: Only find and output $Processor Name and Clock Speed:
+```PowerShell
+$Processor = Get-CimInstance -Class Win32_Processor | ConvertTo-Html -As List -Property Name, MaxClockSpeed -Fragment -PreContent "<h2>Processor (CPU) Information</h2>"
+```
+
+#### Additionally, you can remove objects within "$DSK" to minimize findings:
+```PowerShell
+$DSK= (... DriveLetter, DiskPartition, FileSystem, Status, VolumeName, Description, DiskSizeGB, FreeSpaceGB , PercentageFree, DiskModel) 
+``` 
+
+## Maximize Search Results! 
+
 #### To add additional classes for larger results, use Powershell and enter: 
 ```PowerShell
 Get-CimClass -ClassName *Win32*
