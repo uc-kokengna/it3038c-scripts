@@ -1,5 +1,5 @@
 # Project3
-## Collects and displays detailed information of your system.
+## Collects detailed information of your system and outputs results in your web browser as an HTML.
 #### 1. BIOS: _SMBIOS BIOS Version, Manufacturer, Name, SerialNumber_
 #### 2. OPERATING SYTEM:  _Caption, Version, Build Number, Manufacturer_
 #### 3. PROCESSOR:  _DeviceID, Name, Manufacturer, Max ClockSpeed, Caption_
